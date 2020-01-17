@@ -1,0 +1,15 @@
+This format for storing these data is not ideal for two reasons.
+Firstly, it is not efficient; the parent information is repeated
+data set itself has a “flat” structure. The data set of family members
+once; if more than one copy exists, then it is possible for the copies
+to disagree. The DRY principle (Section 2.7) applies to data as well
+over and over again. This repetition is also undesirable because 
+it creates opportunities for errors and inconsistencies to creep in. 
+Ideally, each individual piece of information would be stored exactly 
+as code. The second problem is not as obvious, but is arguably much
+more important. The fundamental structure of most plain text file 
+formats means that each line of the file contains exactly one record 
+or case in the data set. This works well when a data set only contains 
+information about one type of object, or, put another way, when the 
+does not have a flat structure. There is information about two different 
+types of object, parents and children, and these objects have a definite 
